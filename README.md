@@ -1,5 +1,7 @@
 # nestjs-hero-grpc-sample-with-health-check
 
+[![Build Status](https://travis-ci.com/Jeff-Tian/nestjs-hero-grpc-sample-with-health-check.svg?branch=master)](https://travis-ci.com/Jeff-Tian/nestjs-hero-grpc-sample-with-health-check)
+
 > Add standard grpc health check to the nest js hero grpc sample application.
 
 ## Run locally
