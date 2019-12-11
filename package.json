@@ -1,5 +1,5 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "nestjs-hero-grpc-sample-with-health-check",
   "version": "1.0.0",
   "description": "Nest TypeScript starter repository",
   "license": "MIT",
@@ -15,7 +15,9 @@
     "test": "jest --config ./test/jest-e2e.json",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "deploy": "npm run build&&npx deploy-node-app",
+    "update": "kubectl --context=\"kubesail-jeff-tian\" apply -k inf/prod"
   },
   "dependencies": {
     "@grpc/proto-loader": "0.5.3",
@@ -63,5 +65,17 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "deploy-node-app": {
+    "prod": {
+      "context": "kubesail-jeff-tian",
+      "registry": "index.docker.io/v1/",
+      "type": "server",
+      "port": 3001,
+      "protocol": "https",
+      "entrypoint": "dist/main.js",
+      "registryUsername": "jefftian",
+      "isPublic": true
+    }
   }
 }

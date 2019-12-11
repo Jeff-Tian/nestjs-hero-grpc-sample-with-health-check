@@ -18,3 +18,9 @@ npm start
 ```bash
 npm test
 ```
+
+## Deploy to Kubernetes
+
+```bash
+npm run deploy
+```
