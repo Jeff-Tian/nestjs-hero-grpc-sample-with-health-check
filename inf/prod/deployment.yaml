@@ -38,6 +38,14 @@ spec:
             - containerPort: 3001
               name: http
               protocol: TCP
+          readinessProbe:
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:5000"]
+            initialDelaySeconds: 5
+          livenessProbe:
+            exec:
+              command: ["/bin/grpc_health_probe", "-addr=:5000"]
+            initialDelaySeconds: 10
           resources:
             limits:
               cpu: 150m
