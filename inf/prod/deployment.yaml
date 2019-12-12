@@ -28,7 +28,7 @@ spec:
         deployedBy: deploy-node-app
     spec:
       containers:
-        - image: "jefftian/nestjs-hero-grpc-sample-with-health-check:0a7688d"
+        - image: "jefftian/nestjs-hero-grpc-sample-with-health-check:latest"
           imagePullPolicy: Always
           name: nest-typescript-starter
           env:
@@ -48,11 +48,11 @@ spec:
             initialDelaySeconds: 10
           resources:
             limits:
-              cpu: 150m
-              memory: 128Mi
+              cpu: 15m
+              memory: 64Mi
             requests:
               cpu: 3m
-              memory: 64Mi
+              memory: 32Mi
           command:
             - node
             - dist/main.js
