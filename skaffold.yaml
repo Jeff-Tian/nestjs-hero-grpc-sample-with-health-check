@@ -2,7 +2,7 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-    - image: jefftian/nestjs-hero-grpc-sample-with-health-check:9ff3ea8
+    - image: docker.mirrors.ustc.edu.cn/jefftian/nestjs-hero-grpc-sample-with-health-check:9ff3ea8
 deploy:
   kubectl:
     manifests:
