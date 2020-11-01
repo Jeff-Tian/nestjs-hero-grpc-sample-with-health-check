@@ -17,7 +17,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "deploy": "npm run build&&npx deploy-node-app",
-    "update": "kubectl --context=\"kubesail-jeff-tian\" apply -k inf/prod"
+    "update": "kubectl --context=\"kubesail-jeff-tian\" apply -k inf/prod",
+    "k8s": "kubectl apply -k inf/prod"
   },
   "dependencies": {
     "@grpc/proto-loader": "0.5.3",

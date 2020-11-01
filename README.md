@@ -4,6 +4,11 @@
 
 > Add standard grpc health check to the nest js hero grpc sample application.
 
+## Why
+nest js is lacking of a native way to support the standard gRPC health check of kubernetes cluster, so I created an
+ extension
+ for it: [grpc-health](https://github.com/Jeff-Tian/grpc-health). This repository demonstrates how to use [grpc-health](https://github.com/Jeff-Tian/grpc-health)
+
 ## Run locally
 
 ```bash
@@ -23,4 +28,10 @@ npm test
 
 ```bash
 npm run deploy
+```
+
+Or 
+
+```shell script
+npm run k8s
 ```
