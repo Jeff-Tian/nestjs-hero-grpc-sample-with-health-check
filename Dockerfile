@@ -17,6 +17,7 @@ USER root
 
 COPY package.json yarn.loc[k] package-lock.jso[n] /app/
 
+RUN npm install -g node-gyp
 RUN npm install --production --no-cache --no-audit
 
 RUN GRPC_HEALTH_PROBE_VERSION=v0.3.1 && \
