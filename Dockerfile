@@ -1,4 +1,4 @@
-FROM node:12-slim
+FROM node:14.15.0
 
 # Built by deploy-node-app
 
@@ -17,9 +17,6 @@ USER root
 
 COPY package.json yarn.loc[k] package-lock.jso[n] /app/
 
-RUN apt-get update || : && apt-get install python -y
-
-RUN npm install -g node-gyp
 RUN npm install --production --no-cache --no-audit
 
 RUN GRPC_HEALTH_PROBE_VERSION=v0.3.1 && \
