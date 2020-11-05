@@ -27,7 +27,7 @@ npm test
 ## Deploy to Kubernetes
 
 ```bash
-npm run deploy
+kubectl apply -k k8s
 ```
 
 Or 
