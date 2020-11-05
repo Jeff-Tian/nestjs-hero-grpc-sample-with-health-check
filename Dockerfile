@@ -25,4 +25,4 @@ RUN GRPC_HEALTH_PROBE_VERSION=v0.3.1 && \
 
 COPY . /app/
 
-CMD ["node", "--require", "/app/node_modules/source-map-support/register", "--max-old-space-size=1024", "dist/main.js"]
+CMD ["node", "dist/main.js"]
