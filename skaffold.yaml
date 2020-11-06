@@ -1,9 +1,0 @@
-apiVersion: skaffold/v1
-kind: Config
-build:
-  artifacts:
-    - image: jefftian/nestjs-hero-grpc-sample-with-health-check
-deploy:
-  kubectl:
-    manifests:
-      - k8s.yaml

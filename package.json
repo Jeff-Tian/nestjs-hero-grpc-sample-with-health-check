@@ -1,6 +1,6 @@
 {
   "name": "nestjs-hero-grpc-sample-with-health-check",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Nest TypeScript starter repository",
   "license": "MIT",
   "scripts": {
@@ -16,27 +16,25 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "deploy": "npm run build&&npx deploy-node-app",
-    "update": "kubectl --context=\\\"kubesail-jeff-tian\\\" apply -k k8s",
     "k8s": "kubectl apply -k k8s"
   },
   "dependencies": {
     "@grpc/proto-loader": "0.5.3",
-    "@nestjs/common": "6.10.7",
-    "@nestjs/core": "6.10.7",
-    "@nestjs/microservices": "6.10.7",
+    "@nestjs/common": "7.4.4",
+    "@nestjs/core": "7.4.4",
+    "@nestjs/microservices": "7.4.4",
     "class-transformer": "0.3.1",
     "class-validator": "0.11.0",
-    "grpc": "1.24.2",
-    "grpc-health": "^1.1.4",
+    "grpc": "^1.24.3",
+    "grpc-health": "1.6.0",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.0",
     "rxjs": "6.5.3"
   },
   "devDependencies": {
-    "@nestjs/cli": "6.12.9",
-    "@nestjs/schematics": "6.7.5",
-    "@nestjs/testing": "6.10.7",
+    "@nestjs/cli": "7.5.2",
+    "@nestjs/schematics": "7.2.1",
+    "@nestjs/testing": "7.4.4",
     "@types/express": "4.17.2",
     "@types/jest": "^24.0.23",
     "@types/node": "10.17.3",
