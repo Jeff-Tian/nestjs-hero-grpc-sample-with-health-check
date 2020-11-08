@@ -1,12 +1,12 @@
 import GrpcClient from 'grpc-man/lib/Client';
 import {join} from 'path';
 
-jest.setTimeout(50000);
+jest.setTimeout(50050);
 
 describe('Hero Spec', () => {
     it('gets hero', async () => {
         const client = new GrpcClient(
-            '127.0.0.1:5000',
+            '127.0.0.1:5005',
             join(__dirname, '../src/hero/hero.proto'),
         );
 
@@ -20,7 +20,7 @@ describe('Hero Spec', () => {
 describe('Health Check', () => {
     it('checks app healthy', async () => {
         const client = new GrpcClient(
-            '127.0.0.1:5000',
+            '127.0.0.1:5005',
             join(__dirname, '../node_modules/grpc-health/src/health/health.proto'),
         );
 
