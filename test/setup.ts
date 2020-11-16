@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AppModule } from './../src/app.module';
 import { grpcClientOptions } from '../src/grpc-client.options';
 import { GrpcOptions } from '@nestjs/microservices';
-import { extendedGrpcOptions } from 'grpc-health/dist/health/grpc-client.options';
+import { extendedGrpcOptions } from 'grpc-health/dist/health/health-grpc-client.options';
 
 module.exports = async () => {
   const moduleFixture: TestingModule = await Test.createTestingModule({

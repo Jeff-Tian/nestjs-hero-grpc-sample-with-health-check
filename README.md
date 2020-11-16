@@ -35,3 +35,10 @@ Or
 ```shell script
 npm run k8s
 ```
+
+## Support me
+
+If you find this repo useful, you can [buy me a coffee](https://jeff-tian.jiwai.win/support-me):
+
+[![Buy me a Coffee!](https://api.urlto.app/v1/screenshoturl/jpg?url=https%3A%2F%2Fjeff-tian.jiwai.win%2Fsupport-me&fullpage=true&viewportwidth=1024&viewportheight=1000&ignorecache=false&region=us
+)](https://jeff-tian.jiwai.win/support-me)
