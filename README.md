@@ -5,9 +5,10 @@
 > Add standard grpc health check to the nest js hero grpc sample application.
 
 ## Why
+
 nest js is lacking of a native way to support the standard gRPC health check of kubernetes cluster, so I created an
- extension
- for it: [grpc-health](https://github.com/Jeff-Tian/grpc-health). This repository demonstrates how to use [grpc-health](https://github.com/Jeff-Tian/grpc-health)
+extension
+for it: [grpc-health](https://github.com/Jeff-Tian/grpc-health). This repository demonstrates how to use [grpc-health](https://github.com/Jeff-Tian/grpc-health)
 
 ## Run locally
 
@@ -30,15 +31,21 @@ npm test
 kubectl apply -k k8s
 ```
 
-Or 
+Or
 
 ```shell script
 npm run k8s
 ```
 
+## Usage example
+
+By applying the deployment yaml file to your kubernetes cluster with the wrong port number and correct port number
+you'll see from the dashboard that the health check of the first deployment is failing, and the 2nd one is working!
+
+![Usage example](./example.jpeg)
+
 ## Support me
 
 If you find this repo useful, you can [buy me a coffee](https://jeff-tian.jiwai.win/support-me):
 
-[![Buy me a Coffee!](https://api.urlto.app/v1/screenshoturl/jpg?url=https%3A%2F%2Fjeff-tian.jiwai.win%2Fsupport-me&fullpage=true&viewportwidth=1024&viewportheight=1000&ignorecache=false&region=us
-)](https://jeff-tian.jiwai.win/support-me)
+[![Buy me a Coffee!](https://api.urlto.app/v1/screenshoturl/jpg?url=https%3A%2F%2Fjeff-tian.jiwai.win%2Fsupport-me&fullpage=true&viewportwidth=1024&viewportheight=1000&ignorecache=false&region=us)](https://jeff-tian.jiwai.win/support-me)
